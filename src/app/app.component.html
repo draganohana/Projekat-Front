@@ -1,0 +1,26 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="container">
+
+<div style="text-align:center">
+  <h1 class="display-3">
+    {{ title }}
+  </h1>
+  <img width="300" alt="Angular Logo" src="https://www.bor030.net/wp-content/slike/skolski-dnevnik.jpg">
+
+</div>
+
+<a routerLink="parents"><button type="button" class="btn btn-outline-secondary"
+  *ngIf="authService.role == 'ROLE_ADMIN'"> roditelji</button></a>
+<a routerLink="students"><button type="button" class="btn btn-outline-secondary"
+  *ngIf="authService.role == 'ROLE_ADMIN'"> učenici</button></a>
+<a routerLink="teachers"><button type="button" class="btn btn-outline-secondary"
+  *ngIf="authService.role == 'ROLE_ADMIN'"> nastavnici</button></a>
+<a routerLink="admins"><button type="button" class="btn btn-outline-secondary"
+  *ngIf="authService.role == 'ROLE_ADMIN'"> administratori</button></a>
+<a routerLink="ocene"><button type="button" class="btn btn-outline-secondary"
+  *ngIf="authService.role == 'ROLE_STUDENT'"> ocene</button></a>
+
+<router-outlet></router-outlet>
+<app-message-list></app-message-list>
+
+</div>

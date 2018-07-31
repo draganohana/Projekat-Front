@@ -1,0 +1,25 @@
+<div class="container">
+<h4>Nastavnici</h4>
+  <table class="table table-hover table-stripped">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">Ime</th>
+          <th scope="col">Prezime</th>
+          <th scope="col">Email</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let teacher of teachers$ | async">
+          <th scope="row">{{teacher.id}}</th>
+          <td>{{teacher.firstName}}</td>
+          <td>{{teacher.lastName}}</td>
+          <td>{{teacher.email}}</td>
+          <td><button class="btn btn-danger" (click)="delete(teacher.id)">Obriši</button></td>
+
+        </tr>
+      </tbody>
+    </table>
+
+    <button class="btn btn-primary" routerLink="/addTeacher">Novi nastavnik</button>
+  </div>

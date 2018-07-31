@@ -1,0 +1,12 @@
+
+h3 {
+  color: gray;
+  text-align: center;
+  margin-top: 60px;
+  margin-bottom: 30px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.form-control {
+  background-color: rgb(248, 223, 177);
+}

@@ -1,0 +1,29 @@
+<div class="container">
+
+    <h4>Administratori</h4>
+  <div class="table-responsive">
+      <table class="table table-hover table-stripped">
+          <thead class="thead-dark">
+            <tr>
+              <th scope="col">ID</th>
+              <th scope="col">Ime</th>
+              <th scope="col">Prezime</th>
+              <th scope="col">Email</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let admin of admins$ | async">
+              <th scope="row">{{admin.id}}</th>
+              <td>{{admin.firstName}}</td>
+              <td>{{admin.lastName}}</td>
+              <td>{{admin.email}}</td>
+              <td><button class="btn btn-danger" (click)="delete(admin.id)">Obriši</button>
+
+
+          </tr>
+        </tbody>
+      </table>
+
+      <button class="btn btn-primary" routerLink="/add">Novi administrator</button>
+
+

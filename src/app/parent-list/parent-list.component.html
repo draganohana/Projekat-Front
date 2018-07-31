@@ -1,0 +1,25 @@
+<div class="container">
+  <h4>Roditelji</h4>
+    <table class="table table-hover table-stripped">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Ime</th>
+            <th scope="col">Prezime</th>
+            <th scope="col">Email</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let parent of parents$ | async">
+            <th scope="row">{{parent.id}}</th>
+            <td>{{parent.firstName}}</td>
+            <td>{{parent.lastName}}</td>
+            <td>{{parent.email}}</td>
+            <td><button class="btn btn-danger" (click)="delete(parent.id)">Obriši</button>
+          </tr>
+        </tbody>
+      </table>
+
+      <button class="btn btn-primary" routerLink="/addParent">Novi roditelj</button>
+    </div>
+
